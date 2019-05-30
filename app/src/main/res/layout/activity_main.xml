@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.vasus.searchthree.MainActivity">
+
+    <Button
+        android:text="Forgot password?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp"
+        android:id="@+id/btn_forgot"
+        android:textColor="@android:color/black"
+        android:onClick="forgot"/>
+
+    <Button
+        android:text="Login"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_forgot"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:id="@+id/btn_login"
+        android:layout_width="150dp"
+        android:onClick="login"/>
+
+    <Button
+        android:text="Register"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_register"
+        android:layout_above="@+id/btn_forgot"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp"
+        android:onClick="Register"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_above="@+id/btn_login"
+        android:layout_alignLeft="@+id/btn_login"
+        android:layout_alignStart="@+id/btn_login"
+        android:layout_marginBottom="111dp"
+        android:id="@+id/txt_id"
+        android:layout_alignRight="@+id/btn_register"
+        android:layout_alignEnd="@+id/btn_register"
+        android:hint="Id" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_above="@+id/btn_login"
+        android:layout_alignLeft="@+id/txt_id"
+        android:layout_alignStart="@+id/txt_id"
+        android:layout_marginBottom="36dp"
+        android:id="@+id/txt_password"
+        android:layout_alignRight="@+id/txt_id"
+        android:layout_alignEnd="@+id/txt_id"
+        android:hint="Password" />
+
+    <ImageView
+        app:srcCompat="@android:drawable/ic_search_category_default"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/imageView"
+        android:layout_width="90dp"
+        android:layout_height="90dp" />
+
+    <TextView
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textSize="30sp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Wrong id or password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_wrongIdPass"
+        android:layout_above="@+id/btn_login"
+        android:layout_alignLeft="@+id/btn_login"
+        android:layout_alignStart="@+id/btn_login"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/holo_red_dark" />
+</RelativeLayout>

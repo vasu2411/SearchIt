@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.vasus.searchthree.Register">
+
+    <TextView
+        android:text="Fill up following Details:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:id="@+id/msg_fillup"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/msg_fillup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:layout_below="@+id/msg_fillup"
+                android:layout_alignLeft="@+id/msg_fillup"
+                android:layout_alignStart="@+id/msg_fillup"
+                android:id="@+id/txt_emailId"
+                android:hint="Email-id" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:layout_below="@+id/txt_emailId"
+                android:layout_alignLeft="@+id/txt_emailId"
+                android:layout_alignStart="@+id/txt_emailId"
+                android:id="@+id/txt_password"
+                android:hint="Password" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:layout_below="@+id/txt_password"
+                android:layout_alignLeft="@+id/txt_password"
+                android:layout_alignStart="@+id/txt_password"
+                android:id="@+id/txt_confpassword"
+                android:hint="Confirm Password" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_below="@+id/txt_confpassword"
+                android:layout_alignLeft="@+id/txt_confpassword"
+                android:layout_alignStart="@+id/txt_confpassword"
+                android:id="@+id/txt_fname"
+                android:hint="First name" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_below="@+id/txt_fname"
+                android:layout_alignLeft="@+id/txt_fname"
+                android:layout_alignStart="@+id/txt_fname"
+                android:id="@+id/txt_mname"
+                android:hint="Middle name" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_below="@+id/txt_mname"
+                android:layout_alignLeft="@+id/txt_mname"
+                android:layout_alignStart="@+id/txt_mname"
+                android:id="@+id/txt_lname"
+                android:hint="Last name" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_lname"
+                android:layout_alignLeft="@+id/txt_lname"
+                android:layout_alignStart="@+id/txt_lname"
+                android:id="@+id/txt_dob"
+                android:hint="Date of birth"
+                android:clickable="true"
+                android:editable="false"
+                android:textIsSelectable="true"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:layout_below="@+id/txt_dob"
+                android:layout_alignLeft="@+id/txt_dob"
+                android:layout_alignStart="@+id/txt_dob"
+                android:id="@+id/mobno"
+                android:hint="Mobile number" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/txt_address"
+                android:layout_below="@+id/mobno"
+                android:layout_alignLeft="@+id/mobno"
+                android:layout_alignStart="@+id/mobno"
+                android:hint="Address"/>
+
+            <Button
+                android:text="Choose id-proof from gallery"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_choosePic"
+                android:layout_width="match_parent"
+                android:onClick="selectPicFromGallery"
+                android:layout_below="@+id/mobno"
+                android:layout_alignLeft="@+id/mobno"
+                android:layout_alignStart="@+id/mobno"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_error"
+                android:layout_below="@+id/txt_address"
+                android:layout_alignLeft="@+id/txt_address"
+                android:layout_alignStart="@+id/txt_address"
+                android:layout_marginTop="15dp"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/holo_red_dark"/>
+
+            <Button
+                android:text="Register"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_reg"
+                android:layout_below="@+id/txt_error"
+                android:layout_marginLeft="178dp"
+                android:layout_width="150dp"
+                android:layout_marginTop="15dp"
+                android:onClick="registeration"/>
+
+            <Button
+                android:text="Cancel"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_cancel"
+                android:layout_below="@+id/btn_reg"
+                android:layout_marginLeft="178dp"
+                android:layout_width="150dp"
+                android:layout_marginTop="15dp"
+                android:onClick="cancel"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
